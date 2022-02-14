@@ -4,43 +4,72 @@ import { useRouter } from "next/router";
 export default function NavBar() {
   const router = useRouter();
   return (
-    <nav>
-      <img src="/vercel.svg" />
-      <div>
-        <Link href="/">
-          <a className={router.pathname === "/" ? "active" : ""}>Home</a>
-        </Link>
-        <Link href="/about">
-          <a className={router.pathname === "/about" ? "active" : ""}>About</a>
-        </Link>
+    <div>
+      <div className="nav">
+        <div className="logo">모두의 퀘스트</div>
+        <div className="search">
+          <input type="text" placeholder="깨고 싶은 퀘스트명을 검색해보세요!" />
+          <div>
+            <i className="fa-solid fa-magnifying-glass fa-lg"></i>
+          </div>
+        </div>
+        <div className="side-btn logout">
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
+        </div>
+        <div className="side-btn login">
+          <a href="#">마이페이지</a>
+          <a href="#">충전페이지</a>
+        </div>
       </div>
       <style jsx>{`
-        nav {
-          display: flex;
-          gap: 10px;
-          flex-direction: column;
+        .logo {
+          font-size: 20px;
+          font-weight: 900;
+          color: #ff7761;
+        }
+
+        .nav {
+          display: grid;
+          grid-template-columns: 1fr 3fr 1fr;
+          padding: 30px;
+          justify-content: space-between;
           align-items: center;
-          padding-top: 20px;
-          padding-bottom: 10px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          background-color: white;
         }
-        img {
-          max-width: 100px;
-          margin-bottom: 5px;
+
+        input {
+          width: 100%;
+          text-align: center;
+          border: none;
         }
-        nav a {
-          font-weight: 600;
-          font-size: 18px;
+
+        input:focus {
+          outline: none;
         }
-        .active {
-          color: tomato;
-        }
-        nav div {
+
+        .search {
+          border: solid 1px black;
           display: flex;
-          gap: 10px;
+          padding: 10px;
+          border-radius: 20px;
+        }
+
+        .side-btn {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        .login {
+          display: none;
         }
       `}</style>
-    </nav>
+    </div>
   );
 }
