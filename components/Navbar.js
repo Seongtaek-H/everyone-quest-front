@@ -31,7 +31,10 @@ export default function NavBar() {
 
         .nav {
           display: grid;
-          grid-template-columns: 1fr 3fr 1fr;
+          grid-template-columns: minmax(max-content, 1fr) minmax(
+              max-content,
+              3fr
+            ) minmax(max-content, 1fr);
           padding: 30px;
           justify-content: space-between;
           align-items: center;

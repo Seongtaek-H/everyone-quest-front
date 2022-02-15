@@ -4,12 +4,15 @@ export default function Home() {
   const login = true;
   return (
     <div className="mainContainer">
-      <Main login={login}/>
+      <Main />
       <style jsx>{`
         .mainContainer {
           display: grid;
           height: 100%;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: minmax(max-content, 1fr) minmax(
+              max-content,
+              2fr
+            );
           align-items: center;
         }
       `}</style>
