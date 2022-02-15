@@ -111,6 +111,9 @@ export default function MyApp({ Component, pageProps }) {
         }
         body {
           line-height: 1;
+          background-color: #fceddb;
+          height: 100vh;
+          box-sizing: border-box;
         }
         ol,
         ul {

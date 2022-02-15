@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function NavBar() {
   const router = useRouter();
   return (
-    <div>
+    <>
       <div className="nav">
         <div className="logo">모두의 퀘스트</div>
         <div className="search">
@@ -70,6 +70,6 @@ export default function NavBar() {
           display: none;
         }
       `}</style>
-    </div>
+    </>
   );
 }

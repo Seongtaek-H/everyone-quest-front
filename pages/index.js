@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar.js";
+import Main from "../components/Main.js";
 
 export default function Home() {
+  const login = true;
   return (
-    <body>
-      <div>홈</div>
+    <div className="mainContainer">
+      <Main login={login}/>
       <style jsx>{`
-        body {
+        .mainContainer {
+          display: grid;
+          height: 100%;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
         }
       `}</style>
-    </body>
+    </div>
   );
 }
