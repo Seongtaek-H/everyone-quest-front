@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./componentsCss/Main.module.css";
 
 export default function Main() {
   return (
@@ -14,7 +15,9 @@ export default function Main() {
           어려운 일도 함께라면 쉬울 거에요.
         </p>
       </section>
-      <section className="mainPhoto"></section>
+      <section className="mainPhoto">
+        <Image className={styles.photo} src="/images/moving.jpg" alt="moving" width="700px" height="350px"/>
+      </section>
       <style jsx>{`
         .mainText {
           display: grid;
@@ -33,21 +36,13 @@ export default function Main() {
         }
 
         .mainPhoto {
-          padding-left: 200px;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
-
-        .photoContainer {
-          background-color: red;
-          width: 500px;
-          height: 350px;
-          box-shadow: -2px 2px 15px;
-        }
-
-        .over {
-          position: absolute;
-          top: 200px;
-          right: 200px;
-        }
+        
       `}</style>
     </>
   );
