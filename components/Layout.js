@@ -16,6 +16,10 @@ export default function Layout({ children }) {
         display: grid;
         grid-template-rows: 1fr 9fr;
       }
+
+      .mainContent {
+        margin-top: 100px;
+      }
       `}</style>
     </div>
   );

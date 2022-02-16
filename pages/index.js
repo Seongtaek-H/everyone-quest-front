@@ -1,19 +1,17 @@
 import Main from "../components/Main.js";
+import Main2 from "../components/Main2.js";
 
 export default function Home() {
   const login = true;
   return (
     <div className="mainContainer">
       <Main />
+      <Main2 />
       <style jsx>{`
         .mainContainer {
-          display: grid;
+          display: flex;
+          flex-direction: column;
           height: 100%;
-          grid-template-columns: minmax(max-content, 1fr) minmax(
-              max-content,
-              2fr
-            );
-          align-items: center;
         }
       `}</style>
     </div>

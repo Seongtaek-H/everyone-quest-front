@@ -1,18 +1,18 @@
 import Image from "next/image";
 import styles from "./componentsCss/Main.module.css";
 
-export default function Main() {
+export default function Main2() {
   return (
     <div className="mainContainer">
       <section className="mainText">
         <p>
-          혼자서는 힘든 일<br />
-          함께 해봐요.
+          새로운 멘트<br />
+          필요하다.
         </p>
         <p>
-          간단한 정리부터 이삿짐 옮기기까지,
+          공동체를 강조하는
           <br />
-          어려운 일도 함께라면 쉬울 거에요.
+          그런 멘트라면 참 좋을 거 같다는 생각이 든다.
         </p>
       </section>
       <section className="mainPhoto">
@@ -20,6 +20,7 @@ export default function Main() {
       </section>
       <style jsx>{`
         .mainContainer {
+          background-color: #FAC8BF;
           display: grid;
           height: 90vh;
           grid-template-columns: 1fr 1fr;

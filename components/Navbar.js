@@ -15,7 +15,7 @@ export default function NavBar() {
         </div>
         <div className="side-btn logout">
           <a href="#">로그인</a>
-          <a href="#">회원가입</a>
+          <a href="/join">회원가입</a>
         </div>
         <div className="side-btn login">
           <a href="#">마이페이지</a>
@@ -30,6 +30,9 @@ export default function NavBar() {
         }
 
         .nav {
+          position: fixed;
+          z-index: 2;
+          width: 100vw;
           display: grid;
           grid-template-columns: minmax(max-content, 1fr) minmax(
               max-content,
@@ -39,6 +42,7 @@ export default function NavBar() {
           justify-content: space-between;
           align-items: center;
           background-color: white;
+          
         }
 
         input {

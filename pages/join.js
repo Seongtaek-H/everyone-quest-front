@@ -129,7 +129,7 @@ export default function Join() {
         }
 
         .joinKakao {
-            background-color: #F3CC30;
+            background-color: #F3CC30
         }
 
 
