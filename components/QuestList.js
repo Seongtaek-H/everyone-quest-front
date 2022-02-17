@@ -1,3 +1,7 @@
 export default function QuestList() {
-  return <></>;
+  return (
+    <div className="mainContainer">
+      <style jsx>{``}</style>
+    </div>
+  );
 }

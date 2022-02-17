@@ -11,15 +11,15 @@ export default function Layout({ children }) {
       <Navbar />
       <div className="mainContent">{children}</div>
       <style jsx>{`
-      .mainBody {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 1fr 9fr;
-      }
+        .mainBody {
+          height: 100vh;
+          display: grid;
+          grid-template-rows: 1fr 9fr;
+        }
 
-      .mainContent {
-        margin-top: 99px;
-      }
+        .mainContent {
+          margin-top: 99px;
+        }
       `}</style>
     </div>
   );

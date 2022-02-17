@@ -69,11 +69,6 @@ export default function Join() {
             font-size: 20px;
           }
 
-          header {
-            font-size: 40px;
-            padding: 20px;
-          }
-
           main {
             display: flex;
             justify-content: center;
@@ -95,7 +90,7 @@ export default function Join() {
             height: 35px;
             align-items: center;
             padding: 10px;
-            border-radius: 15px;
+            border-radius: 10px;
             margin-bottom: 30px;
           }
 

@@ -68,14 +68,17 @@ export default function Main_login() {
         .mainContainer {
           display: grid;
           grid-template-rows: 2fr 3fr;
-          width: 50vw;
+          width: 800px;
           height: 100vh;
           background-color: white;
         }
 
         header {
           display: grid;
-          width: 100%;
+          width: 800px;
+          height: 400px;
+          position: fixed;
+          border-bottom: 1px solid black;
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr;
         }
@@ -89,19 +92,27 @@ export default function Main_login() {
         .questCnt,
         .filter {
           display: flex;
+        }
+
+        .location,
+        .questCnt {
           justify-content: center;
         }
 
         .location,
         .reqBtn {
+          font-size: 50px;
           align-items: center;
         }
 
-        .location {
-          font-size: 50px;
+        .reqBtn {
+          width: 100%;
         }
 
         .reqBtn button {
+          margin-left: 10px;
+          width: 320px;
+          height: 140px;
           font-size: 40px;
           padding: 10px;
           border: none;
@@ -135,7 +146,7 @@ export default function Main_login() {
           max-height: 0;
           opacity: 0;
           order: 1;
-          box-shadow: -2px 2px 10px black;
+          border: 1px solid black;
         }
 
         .selected {
@@ -179,7 +190,8 @@ export default function Main_login() {
         }
 
         .select-box .option:hover {
-          background: #414b57;
+          background: rgba(189, 189, 189, 0.4);
+          border-radius: 8px;
         }
 
         .select-box label {
