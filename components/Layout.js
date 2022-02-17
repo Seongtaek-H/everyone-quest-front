@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       }
 
       .mainContent {
-        margin-top: 100px;
+        margin-top: 99px;
       }
       `}</style>
     </div>

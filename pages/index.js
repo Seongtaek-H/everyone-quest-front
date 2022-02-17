@@ -1,17 +1,25 @@
-import Main from "../components/Main.js";
-import Main2 from "../components/Main2.js";
+import Main_logout from "../components/Main_logout.js";
+import Main2_logout from "../components/Main2_logout.js";
+import Main_login from "../components/Main_login.js";
 
 export default function Home() {
   const login = true;
   return (
     <div className="mainContainer">
-      <Main />
-      <Main2 />
+      {
+        login ? 
+          <Main_login />
+        :<>
+          <Main_logout />
+          <Main2_logout />
+        </>
+      }
       <style jsx>{`
         .mainContainer {
           display: flex;
+          align-items: center;
           flex-direction: column;
-          height: 100%;
+          height
         }
       `}</style>
     </div>

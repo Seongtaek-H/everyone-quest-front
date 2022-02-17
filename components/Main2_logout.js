@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./componentsCss/Main.module.css";
 
-export default function Main2() {
+export default function Main2_logout() {
   return (
     <div className="mainContainer">
       <section className="mainText">
@@ -23,6 +23,7 @@ export default function Main2() {
           background-color: #FAC8BF;
           display: grid;
           height: 90vh;
+          width: 100%;
           grid-template-columns: 1fr 1fr;
           align-items: center;
         }

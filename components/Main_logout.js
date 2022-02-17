@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./componentsCss/Main.module.css";
 
-export default function Main() {
+export default function Main_logout() {
   return (
     <div className="mainContainer">
       <section className="mainText">
@@ -21,6 +21,7 @@ export default function Main() {
       <style jsx>{`
         .mainContainer {
           display: grid;
+          width: 100%;
           height: 90vh;
           grid-template-columns: 1fr 1fr;
           align-items: center;
