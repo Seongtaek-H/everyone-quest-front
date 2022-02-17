@@ -6,14 +6,14 @@ export default function Home() {
   const login = true;
   return (
     <div className="mainContainer">
-      {
-        login ? 
-          <Main_login />
-        :<>
+      {login ? (
+        <Main_login />
+      ) : (
+        <>
           <Main_logout />
           <Main2_logout />
         </>
-      }
+      )}
       <style jsx>{`
         .mainContainer {
           display: flex;

@@ -16,7 +16,13 @@ export default function Main_logout() {
         </p>
       </section>
       <section className="mainPhoto">
-        <Image className={styles.photo} src="/images/moving.jpg" alt="moving" width="700px" height="350px"/>
+        <Image
+          className={styles.photo}
+          src="/images/moving.jpg"
+          alt="moving"
+          width="700px"
+          height="350px"
+        />
       </section>
       <style jsx>{`
         .mainContainer {
@@ -49,7 +55,6 @@ export default function Main_logout() {
           justify-content: center;
           align-items: center;
         }
-        
       `}</style>
     </div>
   );
