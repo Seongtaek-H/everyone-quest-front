@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Login() {
   return (
     <>
@@ -7,16 +9,30 @@ export default function Login() {
           <form>
             <input className="input" placeholder="아이디" />
             <input className="input" placeholder="비밀번호" />
-            <button type="submit" className="login" value="로그인" />
-            <button classsName="signUp" value="회원가입" />
-
             <div className="find">아이디 / 비밀번호 찾기</div>
+            <button type="submit" className="login">
+              로그인
+            </button>
+            <button className="sign">회원가입</button>
 
-            <button
-              className="login_google"
-              value="구글 계정으로 로그인"
-            ></button>
-            <button classsName="login_kakao" value="카카오 계정으로 로그인" />
+            <button className="login_google">
+              <Image
+                src="/images/google.png"
+                alt="googleLogo"
+                width="25"
+                height="25"
+              />
+              &nbsp;구글 계정으로 로그인
+            </button>
+            <button className="login_kakao">
+              <Image
+                src="/images/kakao-talk.png"
+                alt="googleLogo"
+                width="25"
+                height="25"
+              />
+              &nbsp;카카오 계정으로 로그인
+            </button>
           </form>
         </main>
       </div>
@@ -43,6 +59,39 @@ export default function Login() {
           background-color: rgba(189, 189, 189, 0.3);
           padding: 10px;
           margin: 20px;
+        }
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 55px;
+          width: 420px;
+          border-radius: 10px;
+          margin-bottom: 30px;
+          border: none;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 20px;
+          color: white;
+        }
+        .find {
+          width: 100%;
+          text-align: right;
+          padding-right: 50px;
+          padding-bottom: 50px;
+          align-items: top;
+        }
+        .login {
+          background-color: #368df6;
+        }
+        .sign {
+          color: black;
+        }
+        .login_google {
+          background-color: #4a3436;
+        }
+        .login_kakao {
+          background-color: #f3cc30;
         }
       `}</style>
     </>
