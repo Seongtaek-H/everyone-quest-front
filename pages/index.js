@@ -4,7 +4,6 @@ import Main_login from "../components/Main_login.js";
 
 export default function Home() {
   const login = true;
-  console.log("Hi!");
   return (
     <div className="mainContainer">
       {login ? (
@@ -20,7 +19,6 @@ export default function Home() {
           display: flex;
           align-items: center;
           flex-direction: column;
-          height
         }
       `}</style>
     </div>

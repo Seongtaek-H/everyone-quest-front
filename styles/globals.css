@@ -89,6 +89,11 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 article,
 aside,
 details,
@@ -106,7 +111,6 @@ body {
   line-height: 1;
   background-color: #fceddb;
   height: 100vh;
-  box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
 }
 ol,
