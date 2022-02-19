@@ -82,10 +82,6 @@ export default function Main_login() {
           grid-template-rows: 1fr 1fr;
         }
 
-        header div {
-          padding: 10px;
-        }
-
         .location,
         .reqBtn,
         .questCnt,
@@ -111,7 +107,7 @@ export default function Main_login() {
 
         .reqBtn button {
           margin-left: 10px;
-          width: 320px;
+          width: 85%;
           height: 140px;
           font-size: 40px;
           padding: 10px;
@@ -152,6 +148,10 @@ export default function Main_login() {
           opacity: 0;
           order: 1;
           border: 1px solid black;
+        }
+
+        .option, .selected {
+          padding: 10px;
         }
 
         .selected {

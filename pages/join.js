@@ -137,14 +137,35 @@ export default function Join() {
 
           .join {
             background-color: #368df6;
+            transition: all 0.4s ease-in-out;
           }
+
+          .join:hover {
+          background: white;
+          color: #368df6;
+          transition: all 0.4s ease-in-out;
+        }
 
           .joinGoogle {
             background-color: #4a3436;
+            transition: all 0.4s ease-in-out;
           }
+
+          .joinGoogle:hover {
+          background: white;
+          color: #4a3436;
+          transition: all 0.4s ease-in-out;
+        }
 
           .joinKakao {
             background-color: #f3cc30;
+            transition: all 0.4s ease-in-out;
+          }
+
+          .joinKakao:hover {
+            background-color: white;
+            color: #f3cc30;
+            transition: all 0.4s ease-in-out;
           }
         `}</style>
       </div>
