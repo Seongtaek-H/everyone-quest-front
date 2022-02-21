@@ -26,6 +26,7 @@ export default function NavBar() {
       </div>
       <style jsx>{`
         .logo {
+          text-align: center;
           padding: 20px;
           font-size: 20px;
           font-weight: 900;
@@ -39,7 +40,7 @@ export default function NavBar() {
           width: 100%;
           z-index: 2;
           display: grid;
-          grid-template-columns: max-content 3fr 1fr;
+          grid-template-columns: 10% 70% 20%;
           justify-content: space-between;
           align-items: center;
           background-color: white;

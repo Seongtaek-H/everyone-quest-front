@@ -72,13 +72,13 @@ export default function Main_login() {
       <style jsx>{`
         .mainContainer {
           display: flex;
-          width: 1590px;
+          width: 80%;
           background-color: white;
         }
 
         header {
           display: grid;
-          width: 1590px;
+          width: 80%;
           height: 400px;
           font-weight: 100;
           position: fixed;
