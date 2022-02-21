@@ -1,10 +1,7 @@
-import Image from "next/image";
-import styles from "./componentsCss/Main.module.css";
-
 export default function Main_logout() {
   return (
     <div className="mainContainer">
-      <section className="mainText">
+      <div className="mainText">
         <p>
           혼자서는 힘든 일<br />
           함께 해봐요.
@@ -14,23 +11,20 @@ export default function Main_logout() {
           <br />
           어려운 일도 함께라면 쉬울 거에요.
         </p>
-      </section>
-      <section className="mainPhoto">
-        <Image
-          className={styles.photo}
-          src="/images/moving.jpg"
-          alt="moving"
-          width="700px"
-          height="350px"
-        />
-      </section>
+      </div>
+
       <style jsx>{`
         .mainContainer {
-          display: grid;
           width: 100%;
-          height: 90vh;
-          grid-template-columns: 1fr 1fr;
+          height: 100vh;
+          display: flex;
           align-items: center;
+          background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/moving.jpg");
+          background-size: cover;
+          background-position: 30%;
+          color: white;
+          background-attachment: fixed;
+
         }
 
         .mainText {
@@ -46,14 +40,7 @@ export default function Main_logout() {
 
         .mainText p:nth-child(2) {
           font-size: 30px;
-        }
-
-        .mainPhoto {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          font-weight: 100;
         }
       `}</style>
     </div>
