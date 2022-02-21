@@ -1,4 +1,5 @@
 import { useState } from "react";
+import QuestList from "./QuestList";
 
 export default function Main_login() {
   const [toggle, setToggle] = useState(false);
@@ -20,10 +21,10 @@ export default function Main_login() {
           <button>퀘스트 요청</button>
         </div>
         <div className="questCnt">
-          아직 깨지못한 퀘스트가
+          아직 깨지못한 퀘스트가 219개 있습니다.
           <br />
           <br />
-          219개 있습니다.
+          함께 해결해봐요!
         </div>
         <div className="filter">
           <div className="select-box">
@@ -61,25 +62,30 @@ export default function Main_login() {
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <QuestList />
+        <QuestList />
+        <QuestList />
+        <QuestList />
+        <QuestList />
+      </main>
       <style jsx>{`
         .mainContainer {
-          display: grid;
-          grid-template-rows: 2fr 3fr;
-          width: 800px;
-          height: 100vh;
+          display: flex;
+          width: 80%;
           background-color: white;
         }
 
         header {
           display: grid;
-          width: 800px;
+          width: 80%;
           height: 400px;
           font-weight: 100;
           position: fixed;
-          background-color: #FCEDDB;
+          background-color: white;
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
+          grid-template-rows: 2fr 1fr;
+          padding-right: 20px;
         }
 
         .location,
@@ -91,13 +97,17 @@ export default function Main_login() {
 
         .location,
         .questCnt {
+          font-size: 60px;
           justify-content: center;
         }
 
         .location,
         .reqBtn {
-          font-size: 50px;
           align-items: center;
+        }
+
+        .location {
+          font-weight: 400;
         }
 
         .reqBtn {
@@ -107,7 +117,7 @@ export default function Main_login() {
 
         .reqBtn button {
           margin-left: 10px;
-          width: 85%;
+          width: 60%;
           height: 140px;
           font-size: 40px;
           padding: 10px;
@@ -125,7 +135,7 @@ export default function Main_login() {
         }
 
         .questCnt {
-          font-size: 25px;
+          font-size: 30px;
         }
 
         .filter {
@@ -137,7 +147,7 @@ export default function Main_login() {
 
         .select-box {
           display: flex;
-          width: 85%;
+          width: 60%;
           flex-direction: column;
         }
 
@@ -152,6 +162,10 @@ export default function Main_login() {
 
         .option, .selected {
           padding: 10px;
+        }
+
+        .option {
+          font-size: 20px;
         }
 
         .selected {
@@ -182,6 +196,11 @@ export default function Main_login() {
 
         .select-box .option .radio {
           display: none;
+        }
+
+        main {
+          width: 100%;
+          padding-top: 400px;
         }
       `}</style>
     </div>
