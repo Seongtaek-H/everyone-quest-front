@@ -3,7 +3,7 @@ import Main2_logout from "../components/Main2_logout.js";
 import Main_login from "../components/Main_login.js";
 
 export default function Home() {
-  const login = true;
+  const login = false;
   console.log("Hi!");
   return (
     <div className="mainContainer">
