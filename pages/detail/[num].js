@@ -58,7 +58,7 @@ return (
             }
             .photoContainer {
                 width: 700px;
-                height: 500px;
+                height: 600px;
                 background-color: blue;
             }
             .userPhoto {
@@ -98,11 +98,9 @@ return (
             }
 
             button {
-            margin-left: 10px;
             width: 60%;
             height: 140px;
             font-size: 40px;
-            padding: 10px;
             border: none;
             color: white;
             background-color: #ff7761;
