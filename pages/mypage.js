@@ -1,24 +1,33 @@
 import { useState } from "react";
 import Image from "next/image";
 import { MyQuest, MyQuset } from "../components/MyQuest";
+import Coupon from "../components/Coupon";
 
-export default function MyPage() {
+export default function MyPage(props) {
   const [myCoupone, setMyCoupone] = useState(0);
   const [myQuest, setMyQuest] = useState(0);
+  const [modal, setModal] = useState(false);
 
   return (
     <>
+      {modal ? <Coupon modal={modal} setModal={setModal} /> : null}
       <div className="MainContainer">
         <header>마이페이지</header>
         <main>
-          <div className="coupon">
+          <div className="section_coupon">
             <div className="myCoupons coupon_item">
               <i className="fa-solid fa-ticket img_ticket"></i>
+
               <p>보유한 쿠폰</p>
               <div>{}장</div>
             </div>
             <div className="link-to-charge coupon_item">
-              <p>
+              <p
+                className="modalOpen"
+                onClick={(e) => {
+                  setModal(!modal);
+                }}
+              >
                 충전하러 가기{" "}
                 <span>
                   <i className="fa-solid fa-angle-right arrow"></i>
@@ -76,7 +85,7 @@ export default function MyPage() {
         .MainContainer {
           position: relative;
         }
-        .coupon {
+        .section_coupon {
           display: flex;
           justify-content: flex-end;
           padding: 10px 20px 40px 20px;
@@ -108,6 +117,9 @@ export default function MyPage() {
           padding: 0px 5px;
           border-radius: 50%;
         }
+        .modalOpen {
+          cursor: pointer;
+        }
         .profile {
           position: absolute;
           top: 20vh;
@@ -117,6 +129,7 @@ export default function MyPage() {
         .profile_photo {
           border-radius: 50%;
           background-image: url("/images/profile.png");
+          z-index: 0;
           background-size: contain;
           width: 200px;
           height: 200px;
