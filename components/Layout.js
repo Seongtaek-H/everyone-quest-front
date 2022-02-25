@@ -14,12 +14,9 @@ export default function Layout({ children }) {
       <style jsx>{`
         .mainBody {
           height: 100vh;
-          display: grid;
-          grid-template-rows: 1fr 9fr;
         }
-
         .mainContent {
-          margin-top: 99px;
+          padding-top: 60px;
         }
       `}</style>
     </div>

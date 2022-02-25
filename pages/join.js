@@ -61,11 +61,17 @@ export default function Join() {
         </main>
 
         <style jsx>{`
+          header {
+            font-size: 40px;
+            padding: 10px;
+            font-weight: 800;
+          }
+
           .mainContainer {
             height: 100%;
             display: grid;
             grid-template-rows: 1fr 9fr;
-            font-weight: 900;
+            font-weight: 100;
             font-size: 20px;
           }
 
@@ -87,10 +93,9 @@ export default function Join() {
             grid-template-columns: 1fr 3fr;
             background-color: rgba(189, 189, 189, 0.3);
             width: 400px;
-            height: 35px;
+            height: 55px;
             align-items: center;
             padding: 10px;
-            border-radius: 10px;
             margin-bottom: 30px;
           }
 
@@ -124,24 +129,43 @@ export default function Join() {
             height: 55px;
             color: white;
             width: 420px;
-            border-radius: 10px;
             margin-bottom: 30px;
             border: none;
             cursor: pointer;
-            font-weight: 700;
             font-size: 20px;
           }
 
           .join {
             background-color: #368df6;
+            transition: all 0.4s ease-in-out;
           }
+
+          .join:hover {
+          background: white;
+          color: #368df6;
+          transition: all 0.4s ease-in-out;
+        }
 
           .joinGoogle {
             background-color: #4a3436;
+            transition: all 0.4s ease-in-out;
           }
+
+          .joinGoogle:hover {
+          background: white;
+          color: #4a3436;
+          transition: all 0.4s ease-in-out;
+        }
 
           .joinKakao {
             background-color: #f3cc30;
+            transition: all 0.4s ease-in-out;
+          }
+
+          .joinKakao:hover {
+            background-color: white;
+            color: #f3cc30;
+            transition: all 0.4s ease-in-out;
           }
         `}</style>
       </div>

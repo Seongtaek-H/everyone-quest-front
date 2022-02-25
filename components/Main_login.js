@@ -1,6 +1,5 @@
-import Image from "next/image";
-import styles from "./componentsCss/Main.module.css";
 import { useState } from "react";
+import QuestList from "./QuestList";
 
 export default function Main_login() {
   const [toggle, setToggle] = useState(false);
@@ -22,10 +21,10 @@ export default function Main_login() {
           <button>퀘스트 요청</button>
         </div>
         <div className="questCnt">
-          아직 깨지못한 퀘스트가
+          아직 깨지못한 퀘스트가 219개 있습니다.
           <br />
           <br />
-          219개 있습니다.
+          함께 해결해봐요!
         </div>
         <div className="filter">
           <div className="select-box">
@@ -63,28 +62,30 @@ export default function Main_login() {
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <QuestList />
+        <QuestList />
+        <QuestList />
+        <QuestList />
+        <QuestList />
+      </main>
       <style jsx>{`
         .mainContainer {
-          display: grid;
-          grid-template-rows: 2fr 3fr;
-          width: 800px;
-          height: 100vh;
+          display: flex;
+          width: 80%;
           background-color: white;
         }
 
         header {
           display: grid;
-          width: 800px;
+          width: 80%;
           height: 400px;
+          font-weight: 100;
           position: fixed;
-          border-bottom: 1px solid black;
+          background-color: white;
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-        }
-
-        header div {
-          padding: 10px;
+          grid-template-rows: 2fr 1fr;
+          padding-right: 20px;
         }
 
         .location,
@@ -96,102 +97,97 @@ export default function Main_login() {
 
         .location,
         .questCnt {
+          font-size: 60px;
           justify-content: center;
         }
 
         .location,
         .reqBtn {
-          font-size: 50px;
           align-items: center;
+        }
+
+        .location {
+          font-weight: 400;
         }
 
         .reqBtn {
           width: 100%;
+          justify-content: end;
         }
 
         .reqBtn button {
           margin-left: 10px;
-          width: 320px;
+          width: 60%;
           height: 140px;
           font-size: 40px;
           padding: 10px;
           border: none;
-          border-radius: 15px;
           color: white;
           background-color: #ff7761;
           cursor: pointer;
-          transition: all 0.3s ease-in-out;
+          transition: all 0.4s ease-in-out;
           font-family: "Noto Sans KR", sans-serif;
         }
 
         .reqBtn button:hover {
-          opacity: 0.7;
-          transition: all 0.3s ease-in-out;
+          background: black;
+          transition: all 0.4s ease-in-out;
         }
 
         .questCnt {
-          font-size: 25px;
+          font-size: 30px;
+        }
+
+        .filter {
+          width: 100%;
+          justify-content: end;
+          font-size: 20px;
+          text-align: right;
         }
 
         .select-box {
           display: flex;
+          width: 60%;
           flex-direction: column;
-          width: 300px;
         }
 
         .select-box .options-container {
           width: 100%;
           transition: all 0.4s;
-          border-radius: 8px;
           max-height: 0;
           opacity: 0;
           order: 1;
           border: 1px solid black;
         }
 
+        .option, .selected {
+          padding: 10px;
+        }
+
+        .option {
+          font-size: 20px;
+        }
+
         .selected {
           width: 100%;
-          border-radius: 8px;
           position: relative;
           margin-bottom: 8px;
 
           order: 0;
         }
 
-        .selected::after {
-          content: "";
-          background: url("images/arrow-down.png");
-          background-size: contain;
-          background-repeat: no-repeat;
-
-          position: absolute;
-          width: 20px;
-          height: 100%;
-          right: 13px;
-          top: 8px;
-
-          transition: all 0.4s;
-        }
-
         .select-box .options-container.active {
-          max-height: 100px;
+          max-height: 150px;
           opacity: 1;
-        }
-
-        .select-box .options-container.active + .selected::after {
-          transform: rotateX(180deg);
-          top: -8px;
         }
 
         .select-box .option,
         .selected {
-          padding: 12px 24px;
           cursor: pointer;
         }
 
-        .select-box .option:hover {
+        .select-box .option:hover, .selected:hover {
           background: rgba(189, 189, 189, 0.4);
-          border-radius: 8px;
         }
 
         .select-box label {
@@ -200,6 +196,11 @@ export default function Main_login() {
 
         .select-box .option .radio {
           display: none;
+        }
+
+        main {
+          width: 100%;
+          padding-top: 400px;
         }
       `}</style>
     </div>
